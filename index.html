@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    analyser.fftSize = 2048;
-    var bufferLength = analyser.frequencyBinCount;
-    var dataArray = new Uint8Array(bufferLength); 
+    <var audioCtx = new (window.AudioContext || window.webkitAudioContext)();></var>
+    <var analyser = audioCtx.createAnalyser();></var>
+
+
+    <analyser.fftSize = 2048;></analyser.fftSize>
+    <var> bufferLength = analyser.frequencyBinCount;</var>
+    <var> dataArray = new Uint8Array(bufferLength);</var>
 
 </body>
 </html>
