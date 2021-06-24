@@ -30,8 +30,9 @@
               scene.background = new THREE.Color(0xffffff);
               camera = new THREE.PerspectiveCamera(
                 40,
-                sizes.width / sizes.height 
-                [500,500]
+                sizes.width / sizes.height,
+                1,
+                1000
               );
               camera.position.z = 10;
 
@@ -48,16 +49,11 @@
 
               scene.add(directionalLight2);
 
-              renderer = new THREE.WebGLRenderer({ antialias: true });
-              renderer.setSize(window.innerWidth, window.innerHeight);
-
               const canvas = document.querySelector('.webgl')
               const renderer = new THREE.WebGLRenderer({
               canvas
               })
               renderer.setSize(sizes.width, sizes.height)
-
-              controls = new THREE.OrbitControls(camera, renderer.domElement);
 
               let loader = new THREE.GLTFLoader();
               loader.load("rose.gltf", function (gltf) {
