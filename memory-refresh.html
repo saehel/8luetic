@@ -114,7 +114,7 @@
               renderer.render(scene, camera);
 
               let loader = new THREE.GLTFLoader();
-              loader.load("rose.gltf", function (gltf) {
+              loader.load("src/smallrock.gltf", function (gltf) {
                 rose = gltf.scene.children[0];
                 rose.position.set(0, 0, 0);
                 rose.geometry.center();
