@@ -7,7 +7,7 @@
     <title>8luetic</title>
   </head>
   <body>
-    <canvas id="canvas"></canvas>
+    <canvas class="canvas"></canvas>
     <table width="100%" cellpadding="5">
       <tr>
         <td valign="top" width="90%">
@@ -20,9 +20,9 @@
           <script>
             // Sizes
             const sizes = {
-            width: 600,
-            height: 400
-            }
+              width: 600,
+              height: 400,
+            };
 
             let scene, camera, renderer;
             function init() {
@@ -49,17 +49,23 @@
 
               scene.add(directionalLight2);
 
-              const canvas = document.querySelector('.webgl')
-              const renderer = new THREE.WebGLRenderer({
-              canvas
-              })
-              renderer.setSize(sizes.width, sizes.height)
+              const canvas = document.querySelector(".canvas");
+              renderer = new THREE.WebGLRenderer({
+                canvas,
+                antialias: true,
+              });
+              renderer.setSize(sizes.width, sizes.height);
+              renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+              const controls = new THREE.OrbitControls(camera, canvas);
+              controls.enableDamping = true;
+              renderer.render(scene, camera);
 
               let loader = new THREE.GLTFLoader();
               loader.load("rose.gltf", function (gltf) {
                 rose = gltf.scene.children[0];
                 rose.position.set(0, 0, 0);
-                scene.add(gltf.scene);
+                rose.geometry.center();
+                scene.add(rose);
                 animate();
               });
             }
