@@ -10,7 +10,7 @@
     <style>
     body {
       background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 23%, rgba(0,0,0,1) 41%, rgba(255,255,255,1) 74%);
+background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 40%, rgba(255,255,255,1) 47%);
     }
     </style>
 
@@ -58,7 +58,7 @@
             let scene, camera, renderer;
             function init() {
               scene = new THREE.Scene();
-              scene.background = new THREE.Color({ alpha: true });
+              scene.background = new THREE.Color(0xffffff);
               camera = new THREE.PerspectiveCamera(
                 40,
                 sizes.width / sizes.height,
