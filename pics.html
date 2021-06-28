@@ -6,7 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8luetic</title>
     <link rel="icon" href="img/icon.gif" type="image/gif">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        }
+        
+        .grid > div {
+         background: white;
+        padding: 1rem;
+        }
+
+        .grid > div::before {
+        content: "";
+        padding-bottom: 100%;
+        display: block;
+        }
+        
+        .grid > div {
+        /* ... */
+        display: grid;
+        }
+        .grid > div::before,
+        .grid > div > img {
+        grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .grid > div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        }
+    </style>
 
 </head>
 <body>
@@ -14,6 +47,39 @@
     <tr>
         <td valign="top" width="90%">
 
+            <div id="content">
+                <div class="grid">
+                  <div><img src="pix/Untitled.bmp"></div>
+                  <div><img src="pix/Untitled.jpg"></div>
+                  <div><img src="pix/ксюша.png"></div>
+                  <div><img src="pix/мандрагора.png"></div>
+                  <div><img src="pix/напряжение.png"></div>
+                  <div><img src="pix/ПАСЛЁНЫШ.jpg"></div>
+                  <div><img src="pix/СОЛНЦЕ.jpg"></div>
+                  <div><img src="pix/1212.jpg"></div>
+                  <div><img src="pix/a guy.jpg"></div>
+                  <div><img src="pix/rabotnik.jpg"></div>
+                  <div><img src="pix/2.bmp"></div>
+                  <div><img src="pix/bull.jpg"></div>
+                  <div><img src="pix/church.jpg"></div>
+                  <div><img src="pix/CRW_4557.jpg"></div>
+                  <div><img src="pix/CRW_4614.jpg"></div>
+                  <div><img src="pix/CRW_4616.jpg"></div>
+                  <div><img src="pix/CRW_4619.jpg"></div>
+                  <div><img src="pix/CRW_4760.jpg"></div>
+                  <div><img src="pix/kljl.jpg"></div>
+                  <div><img src="pix/dggs.jpg"></div>
+                  <div><img src="pix/head.jpg"></div>
+                  <div><img src="pix/IMG_5650.JPG"></div>
+                  <div><img src="pix/lesok2.jpg"></div>
+                  <div><img src="pix/nastya.png"></div>
+                  <div><img src="pix/photo_2020-07-20_22-29-25.jpg"></div>
+                  <div><img src="pix/razdevalka.jpg"></div>
+                  <div><img src="pix/sunn.jpg"></div>
+                  
+                
+              </div>
+    
 
         </td>
 

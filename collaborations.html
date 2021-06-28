@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8luetic</title>
     <link rel="icon" href="img/icon.gif" type="image/gif">
+
+    <style>
+        figure {
+         display: inline-block; /* Выстраиваем по горизонтали */
+         padding: 10px; /* Поля */
+         margin: 0 1em 0 0; /* Отступ справа */
+         vertical-align: top; /* Выравниваем по верхнему краю */
+        }
+        figure.right figcaption {
+         float: right; /* Добавляем текст справа */
+         padding: 5px; /* Поля вокруг текста */
+        }
+       </style>
 </head>
 <body>
     <table width="100%" cellpadding="5">
         <tr>
          <td valign="top" width="90%">
-            <div><A HREF="bear.html">bear 555</A></div>
-            <div><A HREF="memory-refresh.html">memory refresh</A></div>
-            <div><A HREF="golova.html">отрыв башки</A></div>
+            <figure>
+                <a href="bear.html"><img src="img/bear.jpg" width="300" height="300"/></a>
+                <figcaption><A HREF="bear.html">bear 555</A></figcaption>
+            </figure>
 
+            <figure>
+                <img src="img/rose.jpg" width="300" height="300"/>
+                <figcaption><A HREF="memory-refresh.html">memory refresh</A></figcaption>
+            </figure>
+            
+            <figure>
+                <img src="img/1.jpg" width="300" height="300"/>
+                <figcaption><A HREF="golova.html">отрыв башки</A></figcaption>
+            </figure>
             
          </td>
 
