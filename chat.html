@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8luetic</title>
+    <link rel="icon" href="img/icon.gif" type="image/gif">
+
+    <audio id="sound_tag" src="sounds/1.mp3" preload="auto"></audio>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#sound_tag')[0].play();
+    });
+    </script>
+
+<style>
+    @font-face {
+     font-family: Arsenica Variable trial thin; /* Имя шрифта */
+     src: url(fonts/Arsenica-Variable-trial.ttf); /* Путь к файлу со шрифтом */
+    }
+    P {
+     font-family: Arsenica;
+    }
+   </style>
+
+    <style>
+        @font-face {
+         font-family: Hedera; /* Гарнитура шрифта */
+         src: url(fonts/Hedera.ttf); /* Путь к файлу со шрифтом */
+        }
+        h1 {
+         font-family: Hedera, 'Comic Sans MS', cursive;
+         font-size: 250%
+         
+        }
+
+        h1 {
+         color: rgba(0, 0, 0, 0.288);
+         -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+         -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, 0.288);
+        }
+
+        h1 {
+        text-align:center;
+        }
+
+        h1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        }
+       </style>
+       <style>
+        .parentDiv {  
+            display: flex; 
+            justify-content: center; 
+            align-items: center;}
+        </style>
+</head>
+<body>
+    <table width="100%" cellpadding="5">
+        <tr>
+         <td valign="top" width="90%">
+            <h1 id="center"><h1 class="content">DJ 8luetic</h1></h1>
+           <br>
+           <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
+           <script type="text/javascript" src="https://comet-server.ru/CometServerApi.js" ></script>
+           <script type="text/javascript" src="https://comet-server.ru/doc/html_chat.js" ></script>
+           <link rel="stylesheet" type="text/css" href="https://comet-server.ru/doc/html_chat.css"></link>
+            
+           
+           <div id="html-chat"></div>
+           <style>
+          
+           .holder-html-chat{ border: 1px solid #ccc;padding:10px;background-color: #fff;width: 600px;}
+           .html-chat-history{ max-width: 600px; overflow: auto;max-height: 900px; border: 1px solid #ccc;padding: 5px;}
+           .html-chat-js-name{ margin-top:10px; }
+           .html-chat-js-input{ max-width: 600px;max-height: 100px;width: 600px;margin-top:10px; }
+           .html-chat-js-button-holder{ margin-bottom: 0px;margin-top: 10px; }
+           .html-chat-js-button-holder input{ width: 220px; }
+           .html-chat-js-answer{ float:right; }
+           .html-chat-js-answer a{ color: #777;font-size: 12px; font-family: cursive;}
+           .html-chat-js-answer a:hover{ color: #338;font-size: 12px; font-family: cursive;}
+           .html-chat-msg{ margin: 0px; }
+           </style>
+            
+           <script>
+            
+             
+               $(document).ready(function()
+               {
+                  // Запуск api комет сервера
+                  CometServer().start({dev_id: 15 }) 
+                  htmljs_Chat_Init( $("#html-chat") )
+               });
+           </script>
+       
+       
+
+         </td>
+
+         <td valign="top" width="10%">
+            <div><A HREF="index.html">sound</A></div>
+            <div><A HREF="news.html">новости</A></div>
+            <div><A HREF="collaborations.html">коллаборации</A></div>
+            <div><A HREF="commerce.html">коммерция</A></div>
+            <div><A HREF="pics.html">мои картинки</A></div>
+            <div><A HREF="video.html">мои видео</A></div>
+            <div><A HREF="about.html">о себе</A></div>
+            <div><A HREF="contacts.html">контакты</A></div>
+            <a href="index.html"><img src="img/face2.gif"/></a>
+        </td>
+        </tr>
+       </table> 
+</body>
+</html>
